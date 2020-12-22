@@ -1,0 +1,22 @@
+{
+  "name": "DemoSAPUI5",
+  "description": "",
+  "scripts": {
+    "build": "ui5 build",
+    "start": "ui5 serve -o test.html",
+    "deploy": "npx nwabap upload"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.4.0",
+    "nwabap-ui5uploader": "^0.3.4",
+    "ui5-deployer": "^0.2.2",
+    "ui5-middleware-livereload": "^0.4.1",
+    "ui5-middleware-simpleproxy": "^0.2.1"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-simpleproxy",
+      "ui5-middleware-livereload"
+    ]
+  }
+}

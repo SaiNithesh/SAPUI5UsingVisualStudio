@@ -1,0 +1,34 @@
+specVersion: "2.2"
+metadata:
+  name: DemoSAPUI5
+  copyright : |-
+   SAPUI5 Sample Project
+    * (c) Copyright 2019-${currentYear} Sainithesh
+    * No Licence.
+type: application
+# https://sap.github.io/ui5-tooling/pages/extensibility/CustomServerMiddleware/
+server:
+  customMiddleware:
+  - name: ui5-middleware-simpleproxy
+    mountPath: /srv/
+    afterMiddleware: compression
+    configuration:
+      baseUri: https://services.odata.org/V2/Northwind/Northwind.svc/
+  - name: ui5-middleware-simpleproxy
+    mountPath: /serv/
+    afterMiddleware: compression
+    configuration:
+      baseUri: https://services.odata.org/northwind/northwind.svc/
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression
+    configuration:
+      extraExts: "xml,json,properties"
+      path: "webapp"
+framework:
+  name: SAPUI5
+  version: "1.81.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_belize
+

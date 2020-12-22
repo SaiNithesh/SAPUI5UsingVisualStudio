@@ -1,0 +1,12 @@
+{
+    "base": "./dist",
+    "conn_usestrictssl" : false,
+    "conn_server": "http://xxxx.cloudapp.net:8000/",  
+    "conn_client" : "100",  
+    "conn_user": "conn_user",    
+    "conn_password": "conn_password",
+    "abap_package": "$TMP",
+    "abap_bsp": "ZVSCODE_APP",
+    "abap_bsp_text": "UI5 upload through VSCode App",
+    "abap_transport" : "TR12345"
+}
